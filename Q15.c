@@ -21,11 +21,11 @@ int main() {
         int m = 2*n-1;
         float term = pow(x,m) * sign/(float)factorial(m);
         
-        if (sinx !=0){
-            if (factorial(m)<0){//to check when does size of factorial crosses the integer limit
-                break;
-            }
+        
+        if (factorial(m)<0){//to check when does size of factorial crosses the integer limit
+            break;
         }
+        
         
         sinx+=term;
         
