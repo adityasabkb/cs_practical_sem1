@@ -2,13 +2,12 @@
 
 int main() {
     int a[10] = { 1,3,4,6,9,13,16,18,21,23 };
-    int b[10] = { 3,4,7,10,11,15,20,26,28,60 };
+    int b[10] = { 15,16,17,18,19,20,40,45,50,60 };
     int c[20];
-
     int index_a = 0;
     int index_b = 0;
     int index_c = 0;
-    while (index_a < 10 || index_b < 10) {
+    while (index_a < 10 && index_b < 10) {
         if (a[index_a] < b[index_b]) {
             c[index_c] = a[index_a];
             index_c++;
