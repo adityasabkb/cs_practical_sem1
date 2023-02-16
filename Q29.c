@@ -14,7 +14,7 @@ void substring(char s1[], char s2[],int n,int m){
       if (once==false)
       {
         once = true;
-        c = j+1;
+        c = j;
       }
       //incrementing values for next substrings to be compared in the next iteration of the loop
       i++;
