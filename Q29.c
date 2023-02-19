@@ -1,57 +1,42 @@
 #include<stdio.h>
-#include<stdbool.h>
 
-void substring(char s1[], char s2[],int n,int m){
-    int j = 0,c;
-    static bool once = false;
-  
-  for(int i=0;i<=n;){
-
-
-    if(s1[i]==s2[j]){
-
-      //value to c is appointed only once
-      if (once==false)
-      {
-        once = true;
-        c = j+1;
-      }
-      //incrementing values for next substrings to be compared in the next iteration of the loop
-      i++;
-      j++;
-      
-     
+int is_sub(char arr[],int index,char arr2[]){
+    int i = 0;
+    int sub = 1;
+    while (1){
+        if (arr2[i]=='\0' && sub==1){break;}
+        if (arr[index]!=arr2[i]){sub =0; break;}
+        i++;index++;
     }
-    else{
-      //the subtrings of j is incremented for which the 1st substring of s1 matches some jth subtring of s2
-      j++;
-      c = -1;
-      if (j==m)
-      {
-        //breaks out of loop if j exceeds the size of s2
-        break;
-      }
-      
-    }
-
-  }
-  //prints the value of position for which the string dont match or match
-  printf("%d",c);
-    
+    return sub;
 }
 
-void main() {
-int n,m;
-char s1[10],s2[10];
-printf("Enter the first string(smaller string) and its size:\t");
-scanf("%s ",s1);
-scanf("%d", &n);
+int substring(char a[],char b[]){
+  int index = -1;
+  int i=0;
+  while (a[i]!='\0'){
+    if (a[i]==b[0]){
+      if (is_sub(a,i,b)){
+        index = i;
+        break;
+      }
+    }
+    i++;
+  }
+  return index;
+}
+int main(){
+  char a[100];
+  char b[100];
 
-printf("Enter the second string and its size:\t");
-scanf("%s",s2 );
-scanf("%d", &m);
+  printf("enter first string: ");
+  gets(a);
+  
+  printf("string to find: ");
+  gets(b);
 
+  
+  printf("%d",substring(a,b));
 
-substring(s1,s2,n,m);
-
+  return 0;
 }

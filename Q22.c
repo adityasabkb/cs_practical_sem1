@@ -12,7 +12,7 @@ int main(){
 
     int i = 0;
     while (a[i]!='\0'){
-        i++;
+        
         if('0'<=a[i] && '9'>=a[i]){
             digits[a[i]-'0']++;
         }
@@ -22,7 +22,7 @@ int main(){
         else if('A'<=a[i] && 'Z'>=a[i]){
             letters[a[i]-'A']++;
         }
-        
+        i++;
         }
     for (int i=0;i<10;i++){
         if (digits[i]>0){
