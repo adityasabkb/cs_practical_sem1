@@ -1,13 +1,30 @@
 #include<stdio.h>
-#include<stdlib.h>
 
+char temp[10];
 
 int main(){
-    //alot space for 100 integers in heap
-    // 100*4 x -> 100*sizeof(int)
+    // char a = getchar();
+    char str1[10];
+    char str2[10];
+    char str3[10];
+    char str4[10];
+    char str5[10];
+    char str6[10];
 
-    int * ptr = (int *)malloc(100*sizeof(int));
-    int* ptr2 = (int *)calloc(100,sizeof(int));
-    free(ptr);
+    int a;
+    gets(str1);
+    scanf("%d",&a);
+    gets(temp);
+    gets(str2);
+    gets(str3);
+
+    printf("a: %d\n",a);
+    printf("str1: %s\n",str1);
+    printf("str2: %s\n",str2);
+    printf("str3: %s\n",str3);
+    
+
+    
+    
     return 0;
 }
