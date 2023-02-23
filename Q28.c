@@ -8,54 +8,38 @@ void isFibonacci(int n){
         if(a>n){
             break;
         }
-        if (a==n)
-        {
+        if (a==n){
              d = 1;
             break;
-        }
-
-        
+        }        
     }
-    if (d==1)
-    {
+    if (d==1){
         printf("it is a fibonacci\n");
     }
     else
     printf("it is not a fibonacci\n");
-    
-
-
-
 }
 void isPrime(int n){
-    int e;
-    for (int i = 2; i < n; i++)
-    {
-        if (n%i==0)
-        {
-            printf("It is not a prime");
+    int e=1;
+    for (int i = 2; i < n; i++){
+        if (n%i==0){
             break;
         }
         else
         e=0;
-        
     }
+    if (n==2)
+        e=0;
     if (e==0)
     {
         printf("It is prime");
     }
-    
-    
-    
+    else{printf("It is not a prime");}
 }
-
 void main() {
     int a;
     printf("Enter the no.:");
     scanf("%d", &a);
     isFibonacci(a);
     isPrime(a);
-
-
-
 }
