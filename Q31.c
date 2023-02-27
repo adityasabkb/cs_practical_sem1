@@ -14,13 +14,13 @@ void printTime(struct time_struct * t){
 int main(){
     unsigned short int hour;
     printf("enter hour between 0-23 : ");
-    scanf("%d",&hour);
+    scanf("%hu",&hour);
     unsigned short int min;
     printf("enter min between 0-59 : ");
-    scanf("%d",&min);
+    scanf("%hu",&min);
     unsigned short int second;
     printf("enter second between 0-59 : ");
-    scanf("%d",&second);
+    scanf("%hu",&second);
     
 
     struct time_struct t1;

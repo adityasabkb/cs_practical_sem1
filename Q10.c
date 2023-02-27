@@ -22,7 +22,7 @@ int main() {
         perks = 6500;
     } 
     else {
-        printf("Level 2\n");
+        printf("Level 4\n");
         tax = 0;
         perks = 6500;
     }

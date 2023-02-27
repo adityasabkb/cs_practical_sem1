@@ -19,10 +19,7 @@ int compare(int *a1, int *a2, int n)
 	else
 		 return 1;
 }
-
 int main(){
-
-
 	int a1[100], a2[100];
 	int n, i;
 	printf("Enter the size of the array: ");
@@ -37,8 +34,6 @@ int main(){
 		scanf("%d", &a2[i]);
 	bool x = compare(a1, a2, n);
     printf("\n%d", x);
-    
-    
-    
+      
     return 0;
 }

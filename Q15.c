@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int factorial(int x) {
+int fact(int x) {
     int fact = 1;
     for (int i =1; i<=x;i++){
         fact*=i;
@@ -14,24 +14,8 @@ int main() {
     float x;
     scanf("%f",&x);
 
-    float sign = 1;
-    float sinx = 0;
-    int n=1;
-    while (1){
-        int m = 2*n-1;
-        float term = pow(x,m) * sign/(float)factorial(m);
-        
-        
-        if (factorial(m)<0){//to check when does size of factorial crosses the integer limit
-            break;
-        }
-        
-        
-        sinx+=term;
-        
-        sign*=-1;
-        n+=1;
-    }
+    float sinx = x-pow(x,3)/fact(3)+pow(x,5)/fact(5)-pow(x,7)/fact(7);
+    
     printf("%f",sinx);
     return 0;
 }

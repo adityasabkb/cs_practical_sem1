@@ -8,7 +8,7 @@ int main() {
     int n2;
     scanf("%d", &n2);
 
-    int hcf = 0;
+    int hcf = 1;
     if (n1 > n2) {
         int temp = n1;
         n1 = n2;
@@ -24,10 +24,7 @@ int main() {
             }
         }
     }
-    if (hcf) {
-        printf("The highest common factor is:  %d", hcf);
-    } else {
-        printf("The highest common factor doesn't exist");
-    }
+    printf("The highest common factor is:  %d", hcf);
+    
     return 0;
 }

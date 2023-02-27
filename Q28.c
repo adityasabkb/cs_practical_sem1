@@ -6,16 +6,13 @@ void isFibonacci(int n){
         a = a+b;
         b = temp;
         if(a>n){
-            break;
-        }
+            break;}
         if (a==n){
              d = 1;
-            break;
-        }        
+            break;}        
     }
     if (d==1){
-        printf("it is a fibonacci\n");
-    }
+        printf("it is a fibonacci\n");}
     else
     printf("it is not a fibonacci\n");
 }
@@ -23,15 +20,12 @@ void isPrime(int n){
     int e=1;
     for (int i = 2; i < n; i++){
         if (n%i==0){
-            break;
-        }
+            break;}
         else
-        e=0;
-    }
+        e=0;}
     if (n==2)
         e=0;
-    if (e==0)
-    {
+    if (e==0){
         printf("It is prime");
     }
     else{printf("It is not a prime");}

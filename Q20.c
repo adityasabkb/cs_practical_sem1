@@ -4,34 +4,38 @@ int main() {
     printf("Enter a string: ");
     char str[100];
     gets(str);
-    char vow[5] = { 'a','e','i','o','u' };
-    char conso[21] = { 'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z' };
-    char dig[10] = { '0','1','2','3','4','5','6','7','8','9' };
-    int numVow = 0;
-    int numConso = 0;
-    int numDig = 0;
+    char vowel[5] = { 'a','e','i','o','u' };
+    int nVow = 0;
+    int nConso = 0;
+    int nDig = 0;
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] >= 65 && str[i] <= 91) {
-            str[i] += 32;
-        }
-        for (int j = 0; j < 5; j++) {
-            if (str[i] == vow[j]) {
-                numVow++;
+        if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >='a' && str[i]<= 'z')){
+
+            str[i] = (str[i]<'a')?str[i]+'a'-'A':str[i];
+        
+            int isVow=0;
+            for (int j = 0; j < 5; j++) {
+                if (str[i] == vowel[j]) {
+                    nVow++;
+                    isVow=1;
+                    break;
+                }
+            }
+            if (isVow==0 && str[i]!=' ' && str[i]!='\t'){
+                nConso++;
             }
         }
-        for (int j = 0; j < 21; j++) {
-            if (str[i] == conso[j]) {
-                numConso++;
+        else{
+            for (int j = '0'; j <= '9'; j++) {
+            if (str[i] == j) {
+                nDig++;
+            }
             }
         }
-        for (int j = 0; j < 10; j++) {
-            if (str[i] == dig[j]) {
-                numDig++;
-            }
-        }
+        
     }
-    printf("Vowels: %d", numVow);
-    printf("\nConsonants: %d", numConso);
-    printf("\nDigits: %d", numDig);
+    printf("Vowels: %d", nVow);
+    printf("\nConsonants: %d", nConso);
+    printf("\nDigits: %d", nDig);
     return 0;
 }

@@ -8,6 +8,6 @@ int main(){
     for(int i=0;i<10;i++){
         amount+=amount*0.0775;
     }
-    printf("the return is %f",amount - principal);
+    printf("the return is %f",amount);
     return 0;
 }

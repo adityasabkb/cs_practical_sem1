@@ -4,41 +4,19 @@
 
 char* getStr(char* str,char c,int isTen){
     
-    switch (c)
-    {
-    case '0':
-        strcpy(str,"\0");
-        break;
-    case '1':
-        strcpy(str,"one");
-        break;
-    case '2':
-        (isTen)?(strcpy(str,"twenty")):(strcpy(str,"two"));
-        break;
-    case '3':
-        (isTen)?(strcpy(str,"thirty")):(strcpy(str,"three"));
-        break;
-    case '4':
-        (isTen)?(strcpy(str,"fourty")):(strcpy(str,"four"));
-        break;
-    case '5':
-        (isTen)?(strcpy(str,"fifty")):(strcpy(str,"five"));
-        break;
-    case '6':
-        (isTen)?(strcpy(str,"sixty")):(strcpy(str,"six"));
-        break;
-    case '7':
-        (isTen)?(strcpy(str,"seventy")):(strcpy(str,"seven"));
-        break;
-    case '8':
-        (isTen)?(strcpy(str,"eighty")):(strcpy(str,"eight"));
-        break;
-    case '9':
-        (isTen)?(strcpy(str,"ninety")):(strcpy(str,"nine"));
-        break;
+    switch (c){
+    case '0':strcpy(str,"\0");break;
+    case '1':strcpy(str,"one");break;
+    case '2':(isTen)?(strcpy(str,"twenty")):(strcpy(str,"two"));break;
+    case '3':(isTen)?(strcpy(str,"thirty")):(strcpy(str,"three"));break;
+    case '4':(isTen)?(strcpy(str,"fourty")):(strcpy(str,"four"));break;
+    case '5':(isTen)?(strcpy(str,"fifty")):(strcpy(str,"five"));break;
+    case '6':(isTen)?(strcpy(str,"sixty")):(strcpy(str,"six"));break;
+    case '7':(isTen)?(strcpy(str,"seventy")):(strcpy(str,"seven"));break;
+    case '8':(isTen)?(strcpy(str,"eighty")):(strcpy(str,"eight"));break;
+    case '9':(isTen)?(strcpy(str,"ninety")):(strcpy(str,"nine"));break;
     default:
         break;
-    
     }
     
     return str;
@@ -46,36 +24,16 @@ char* getStr(char* str,char c,int isTen){
 char * getStrTen(char* str,char a){
     switch (a)
     {
-    case '0':
-        strcpy(str,"ten");
-        break;
-    case '1':
-        strcpy(str,"eleven");
-        break;
-    case '2':
-        strcpy(str,"twelve");
-        break;
-    case '3':
-        strcpy(str,"thirteen");
-        break;
-    case '4':
-        strcpy(str,"fourteen");
-        break;
-    case '5':
-        strcpy(str,"fifteen");
-        break;
-    case '6':
-        strcpy(str,"sixteen");
-        break;
-    case '7':
-        strcpy(str,"seventeen");
-        break;
-    case '8':
-        strcpy(str,"eighteen");
-        break;
-    case '9':
-        strcpy(str,"nineteen");
-        break;
+    case '0':strcpy(str,"ten");break;
+    case '1':strcpy(str,"eleven");break;
+    case '2':strcpy(str,"twelve");break;
+    case '3':strcpy(str,"thirteen");break;
+    case '4':strcpy(str,"fourteen");break;
+    case '5':strcpy(str,"fifteen");break;
+    case '6':strcpy(str,"sixteen");break;
+    case '7':strcpy(str,"seventeen");break;
+    case '8':strcpy(str,"eighteen");break;
+    case '9':strcpy(str,"nineteen");break;
     
     default:
         break;

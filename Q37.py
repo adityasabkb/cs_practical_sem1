@@ -3,7 +3,7 @@ def takeInput(max):
     assert(x<=max),"marks greater than maximum"
     return x
 
-max = int(input("enter maximum marks"))
+max = int(input("enter maximum marks: "))
 
 m1 = takeInput(max)
 m2 = takeInput(max)
